@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] MovementController movement;
     ProjectileLauncher pl;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             input.x += -1;
+    
+            
         }
 
         if (Input.GetKey(KeyCode.S))

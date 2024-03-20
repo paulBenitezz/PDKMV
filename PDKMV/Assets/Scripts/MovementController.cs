@@ -12,4 +12,6 @@ public class MovementController : MonoBehaviour
         transform.position += input * Time.deltaTime * speed;
 
     }
+
+    
 }
