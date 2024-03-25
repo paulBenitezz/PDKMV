@@ -613,6 +613,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5189392456653302622, guid: 0039c9bd47cab2542b1e343f174277ae, type: 3}
+      propertyPath: m_TagString
+      value: Barrier
+      objectReference: {fileID: 0}
     - target: {fileID: 5825000224612150779, guid: 0039c9bd47cab2542b1e343f174277ae, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 267
@@ -664,9 +668,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4020767737095483774, guid: e2c206c98052ed0468288838d1c3a9d8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474645912312741511, guid: e2c206c98052ed0468288838d1c3a9d8, type: 3}
+      propertyPath: ProjectileSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5048977490485483097, guid: e2c206c98052ed0468288838d1c3a9d8, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738234939703563858, guid: e2c206c98052ed0468288838d1c3a9d8, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738234939703563858, guid: e2c206c98052ed0468288838d1c3a9d8, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6195051647160632851, guid: e2c206c98052ed0468288838d1c3a9d8, type: 3}
       propertyPath: healthbar
