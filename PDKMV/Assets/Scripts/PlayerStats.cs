@@ -1,24 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] public float MaxPlayerHealth = 5f;
-    [SerializeField] public float MaxBoxHealth = 10f;
+    public float MaxPlayerHealth = 5f;
     public float CurrentPlayerHealth;
-    public float CurrentBoxHealth;
+    public Healthbar healthbar;
     
+
+    void Awake() {
+        CurrentPlayerHealth = MaxPlayerHealth;
+    }
     void Start() {
         Debug.Log("Player Health = " + MaxPlayerHealth);
-        Debug.Log("Box Health = " + MaxBoxHealth);
+        healthbar.setMaxHealth(MaxPlayerHealth);
         
+        
+    }
+    void Update(){
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            takeDamage(1);
+          
+        }
+
+
     }
 
 
     public void takeDamage(int damage)
     {
         CurrentPlayerHealth -= damage;
-        Debug.Log(CurrentPlayerHealth);
+        healthbar.setHealth(CurrentPlayerHealth);
+        Debug.Log("Current Player Health = " + CurrentPlayerHealth);
+
+        if (CurrentPlayerHealth <= 0)
+        {
+            Debug.Log("PLAYER DIED ... GAME OVER");
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }

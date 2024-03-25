@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Barrier
+  - Boombox
+  - Enemy_Music
+  - Enemy_Player
   layers:
   - Default
   - TransparentFX

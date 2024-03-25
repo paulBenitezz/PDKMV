@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public Slider healthbar;
+
+    public void setHealth(float health)
     {
-        
+        healthbar.value = health;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void setMaxHealth(float health) {
+        healthbar.maxValue = health;
+        healthbar.value = health;
     }
 }

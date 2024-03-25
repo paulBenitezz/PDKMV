@@ -7,18 +7,13 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] MovementController movement;
     ProjectileLauncher pl;
-    PlayerStats ps;
+
 
     // Start is called before the first frame update
     void Start()
     {
         pl = GetComponent<ProjectileLauncher>();
-        ps = GetComponent<PlayerStats>();
-
-        if (ps == null)
-        {
-            Debug.LogError("PlayerStats component not found on the GameObject or its children.");
-        }
+        
 
     }
 
@@ -55,10 +50,6 @@ public class PlayerMovement : MonoBehaviour
             pl.shoot(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ps.takeDamage(1);
-        }
 
         movement.move(input);
 

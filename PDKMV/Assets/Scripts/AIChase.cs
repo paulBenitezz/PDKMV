@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class AIChase : MonoBehaviour
 {
-    public GameObject gob;
     public float speed;
     private float distance;
     public float radius = 1f;
     AIHandler handler;
     PlayerStats stats;
+    GameObject obj;
+    BoxStats bs;
+    PlayerStats ps;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,16 +22,36 @@ public class AIChase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance = Vector2.Distance(transform.position, gob.transform.position);
+        if (this.gameObject.tag == "Enemy_Player") {
+            obj = GameObject.FindGameObjectWithTag("Player");
+            distance = Vector2.Distance(transform.position, obj.transform.position);
 
-        if (distance <= radius) {
-            //handler.AIDamageInflict(stats.PlayerHealth);    // attack script
-            //Debug.Log(stats.PlayerHealth);
-            return;
+            if (distance <= radius)
+            {
+                
+                return;
+            }
+            Vector2 direction = obj.transform.position - transform.position;
+            direction.Normalize();
+
+            transform.position = Vector2.MoveTowards(this.transform.position, obj.transform.position, speed * Time.deltaTime);
         }
-        Vector2 direction = gob.transform.position - transform.position;
-        direction.Normalize();
 
-        transform.position = Vector2.MoveTowards(this.transform.position, gob.transform.position, speed * Time.deltaTime);
+        else if (this.gameObject.tag == "Enemy_Music") {
+
+            obj = GameObject.FindGameObjectWithTag("Boombox");
+            distance = Vector2.Distance(transform.position, obj.transform.position);
+
+            if (distance <= radius) {
+                
+                return;
+            }
+            Vector2 direction = obj.transform.position - transform.position;
+            direction.Normalize();
+
+            transform.position = Vector2.MoveTowards(this.transform.position, obj.transform.position, speed * Time.deltaTime);
+        }
+        
+
     }
 }

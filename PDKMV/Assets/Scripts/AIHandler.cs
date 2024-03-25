@@ -4,10 +4,33 @@ using UnityEngine;
 
 public class AIHandler : MonoBehaviour
 {
-  
-  public void AIDamageInflict(float health) {
+   public float AIMaxHealth = 2f;
+   public float AICurrentHealth;
+   
+   void Awake() {
+    AICurrentHealth = AIMaxHealth; 
+   } 
+    public void GetAICurrentHealth() {
+        
+        AICurrentHealth = AIDamageTake(AICurrentHealth);
 
-    health -= 1f;
-    
-  }
+    }
+
+    public float AIDamageTake(float health)
+    {
+        health -= 1f;
+
+        if (health <= 0)
+        {
+            AIHandleDeath();
+        }
+        return health;
+
+    }
+
+    public void AIHandleDeath()
+    {
+        Destroy(this.gameObject);
+    }
+
 }
