@@ -4,8 +4,21 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    [SerializeField] public float MaxPlayerHealth = 5f;
+    [SerializeField] public float MaxBoxHealth = 10f;
+    public float CurrentPlayerHealth;
+    public float CurrentBoxHealth;
     
-    [SerializeField] float Health = 5;
+    void Start() {
+        Debug.Log("Player Health = " + MaxPlayerHealth);
+        Debug.Log("Box Health = " + MaxBoxHealth);
+        
+    }
 
-    
+
+    public void takeDamage(int damage)
+    {
+        CurrentPlayerHealth -= damage;
+        Debug.Log(CurrentPlayerHealth);
+    }
 }
