@@ -338,7 +338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 144, y: 311}
+  m_AnchoredPosition: {x: 267, y: 437}
   m_SizeDelta: {x: 200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2388096720459398582
@@ -426,6 +426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1402995525096927390}
   - component: {fileID: 607445209565180688}
+  - component: {fileID: 5383081095789903034}
   m_Layer: 5
   m_Name: Health Bar Music
   m_TagString: Untagged
@@ -506,6 +507,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5383081095789903034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572018879900196331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73da6f2de8a2b544b944f997ae1b2798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 607445209565180688}
 --- !u!1 &2962104262292470858
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,6 +905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7785196698956292205}
   - component: {fileID: 6569521299979652534}
+  - component: {fileID: 7974281077650377913}
   m_Layer: 5
   m_Name: Health Bar Player
   m_TagString: Untagged
@@ -971,6 +986,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7974281077650377913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310053478085707254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73da6f2de8a2b544b944f997ae1b2798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 6569521299979652534}
 --- !u!1 &5189392456653302622
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +1010,7 @@ GameObject:
   - component: {fileID: 5989991657020791006}
   m_Layer: 5
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1170,7 +1198,7 @@ GameObject:
   - component: {fileID: 248244764434090842}
   - component: {fileID: 5610288490029190884}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Clef
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1508,9 +1536,9 @@ Canvas:
   m_GameObject: {fileID: 8514105274572983863}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1520,7 +1548,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &8298098929680072296
 MonoBehaviour:
@@ -1600,7 +1628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -362.72302, y: 311}
+  m_AnchoredPosition: {x: -350, y: 437}
   m_SizeDelta: {x: 197.8754, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9010970060823700547

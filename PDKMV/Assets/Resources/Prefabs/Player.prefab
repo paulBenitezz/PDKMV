@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6195051647160632851}
   - component: {fileID: 4490323849466038979}
   - component: {fileID: 680970257445584948}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4020767737095483774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -232,6 +232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGuitarHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 214299284283207478, guid: 455e607f033171b4db4dc6415b810550, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 270500311963179498, guid: 455e607f033171b4db4dc6415b810550, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -271,6 +275,14 @@ PrefabInstance:
     - target: {fileID: 270500311963179498, guid: 455e607f033171b4db4dc6415b810550, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988674248453716819, guid: 455e607f033171b4db4dc6415b810550, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557806744866313621, guid: 455e607f033171b4db4dc6415b810550, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8771456734730052071, guid: 455e607f033171b4db4dc6415b810550, type: 3}
       propertyPath: m_LocalPosition.x
@@ -312,6 +324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerInputController
       objectReference: {fileID: 0}
+    - target: {fileID: 3586293562438944194, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6371378094126076012, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
       propertyPath: speed
       value: 10
@@ -324,6 +340,10 @@ PrefabInstance:
       propertyPath: projectile
       value: 
       objectReference: {fileID: 155268584659030926, guid: 94b33829842350d45add42f226ee90a3, type: 3}
+    - target: {fileID: 6371378094126076012, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
+      propertyPath: ProjectileSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6371378094126076012, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
       propertyPath: projectiles.Array.size
       value: 2

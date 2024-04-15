@@ -214,6 +214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1181252748116965647, guid: b644931520eef1f419d7555092eaee38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 317048443}
     - target: {fileID: 4306244290622733630, guid: b644931520eef1f419d7555092eaee38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -364,6 +368,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc9330ed6a53d548ae2446893bc21d6, type: 3}
+--- !u!1001 &3529448798226804683
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5777129488792327120, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.255105
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777129488792327120, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0680634
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777129488792327120, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.030557182
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777129488792327120, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777129488792327120, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777129488792327120, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777129488792327120, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777129488792327120, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777129488792327120, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777129488792327120, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404806052663566749, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
+      propertyPath: m_Name
+      value: Main Menu Audio
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f802737be547a5048b9af1afdb1fcd04, type: 3}
 --- !u!1001 &7888791552202084676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -412,6 +473,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5120631755373502266, guid: 7d80b8b634af016488d19611e2f2457a, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5120631755373502266, guid: 7d80b8b634af016488d19611e2f2457a, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.6150943
+      objectReference: {fileID: 0}
+    - target: {fileID: 5120631755373502266, guid: 7d80b8b634af016488d19611e2f2457a, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.5619286
+      objectReference: {fileID: 0}
+    - target: {fileID: 5120631755373502266, guid: 7d80b8b634af016488d19611e2f2457a, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.1241794
+      objectReference: {fileID: 0}
     - target: {fileID: 7337540661912842243, guid: 7d80b8b634af016488d19611e2f2457a, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -429,3 +506,4 @@ SceneRoots:
   - {fileID: 3019360974625708198}
   - {fileID: 422578812826305091}
   - {fileID: 604913178}
+  - {fileID: 3529448798226804683}
