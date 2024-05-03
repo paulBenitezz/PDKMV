@@ -12,6 +12,8 @@ public class PlayerAim : MonoBehaviour
      [SerializeField] public GameObject weapon;
     float angle;
     public Vector3 localScale;
+    bool isFlippedLeft = false;
+    bool isFlippedRight = true; // default value
     void Update()
     {
         WeaponRotation();
@@ -30,9 +32,23 @@ public class PlayerAim : MonoBehaviour
 
         if (angle > 90 || angle < -90) {
             localScale.y = -1f;
+            if (!isFlippedRight)
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                isFlippedRight = true;
+                isFlippedLeft = false;
+            }
+
         }
         else {
             localScale.y = 1f;
+           
+            if (!isFlippedLeft)
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                isFlippedLeft = true;
+                isFlippedRight = false;
+            }
         }
 
         weapon.transform.localScale = localScale;

@@ -5,7 +5,6 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     [SerializeField] float speed;
-    [SerializeField] GameObject sprite;
 
     public void move(Vector3 input)
     {

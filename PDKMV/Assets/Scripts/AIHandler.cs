@@ -6,7 +6,7 @@ public class AIHandler : MonoBehaviour
 {
    public float AIMaxHealth = 2f;
    public float AICurrentHealth;
-   
+
    void Awake() {
     AICurrentHealth = AIMaxHealth; 
    } 
