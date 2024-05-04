@@ -9,6 +9,7 @@ public class MovementController : MonoBehaviour
     public void move(Vector3 input)
     {
         transform.position += input * Time.deltaTime * speed;
+       
 
     }
 

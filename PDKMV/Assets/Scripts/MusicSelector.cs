@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.UI;
+using TMPro;
 
 public class MusicSelector : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class MusicSelector : MonoBehaviour
 
     // Array of AudioClip to hold your songs
     public AudioClip[] songs;
+    
 
     // Method to handle button click event
     public void OnSongSelectButtonClicked(int songIndex)

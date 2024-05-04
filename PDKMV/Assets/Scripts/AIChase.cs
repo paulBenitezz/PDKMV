@@ -13,13 +13,12 @@ public class AIChase : MonoBehaviour
     GameObject obj;
     BoxStats bs;
     PlayerStats ps;
-    Rigidbody2D rb;
     Animator animator;
     bool IsChasing = true;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+
         animator = GetComponent<Animator>();
     }
 
