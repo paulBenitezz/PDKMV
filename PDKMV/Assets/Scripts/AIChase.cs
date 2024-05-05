@@ -14,7 +14,7 @@ public class AIChase : MonoBehaviour
     BoxStats bs;
     PlayerStats ps;
     Animator animator;
-    bool IsChasing = true;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,13 +32,17 @@ public class AIChase : MonoBehaviour
 
             if (distance <= radius)
             {
-                animator.SetBool("IsChasing", true);
+                animator.enabled = false;
+                animator.SetBool("isChasing", true);
                 return;
             }
             Vector2 direction = obj.transform.position - transform.position;
             direction.Normalize();
 
             transform.position = Vector2.MoveTowards(this.transform.position, obj.transform.position, speed * Time.deltaTime);
+            animator.enabled = true;
+            animator.SetBool("isChasing", true);
+
         }
 
         else if (this.gameObject.tag == "Enemy_Music")
@@ -49,13 +53,16 @@ public class AIChase : MonoBehaviour
 
             if (distance <= radius)
             {
-                animator.SetBool("IsChasing", true);
+                animator.enabled = false;
+                animator.SetBool("isChasing", false);
                 return;
             }
             Vector2 direction = obj.transform.position - transform.position;
             direction.Normalize();
 
             transform.position = Vector2.MoveTowards(this.transform.position, obj.transform.position, speed * Time.deltaTime);
+            animator.enabled = true;
+            animator.SetBool("isChasing", true);
         }
 
 

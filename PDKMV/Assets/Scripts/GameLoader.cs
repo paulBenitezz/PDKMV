@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameLoader : MonoBehaviour
 {
@@ -10,12 +11,20 @@ public class GameLoader : MonoBehaviour
     public AudioClip[] songs;
     private int selectedSongIndex = 0;
     [SerializeField] TextMeshProUGUI tmp;
+    public static PlayerInputController pic;
+  
 
     // Start is called before the first frame update
     void Start()
     {
         PlaySelectedSong();
         StartCoroutine(PrintSongs(3f));
+        if (pic == null)
+        {
+            pic = FindObjectOfType<PlayerInputController>();
+            Debug.Log("pic is null at start");
+        }
+            
     }
 
     // Update is called once per frame
@@ -71,4 +80,33 @@ public class GameLoader : MonoBehaviour
             Debug.LogWarning("AudioClip is null.");
         }
     }
+
+    public void Pause()
+    {
+        pic.canShoot = false;
+
+        Debug.Log("Can Shoot: " + pic.canShoot);
+        Time.timeScale = 0;
+
+    }
+
+    public void Unpause()
+    {
+        if (pic != null)
+        {
+            Time.timeScale = 1;
+            pic.canShoot = true;
+            Debug.Log("Can Shoot: " + pic.canShoot);
+        }
+        else
+        {
+            Debug.LogWarning("pic is null. Unable to unpause the game.");
+        }
+    }
+
+    public void Quit() 
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }

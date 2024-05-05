@@ -16,10 +16,10 @@ public class PlayerAim : MonoBehaviour
     bool isFlippedRight = true; // default value
     void Update()
     {
-        WeaponRotation();
+        SpriteRotation();
     }
 
-    void WeaponRotation()
+    void SpriteRotation()
     {
         // got this from this video https://www.youtube.com/watch?v=zYN1LTMdFYg
         worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

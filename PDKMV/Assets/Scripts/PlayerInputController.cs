@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerInputController : MonoBehaviour
 {
 
     [SerializeField] MovementController movement;
     ProjectileLauncher pl;
     bool isMoving = false;
     Animator animator;
-    
+    GameLoader gameLoader;
+    bool isPaused = false;
+    public bool canShoot = true;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,20 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Vector3 input = Vector3.zero;
+
+        if (Input.GetKey(KeyCode.Escape)) {
+
+            if (!isPaused) {
+                gameLoader.Pause();
+                isPaused = true;
+            }
+            else {
+                gameLoader.Unpause();
+                isPaused = false;
+            }
+
+            
+        }
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -42,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
             isMoving = true;
         }
 
-        else if(Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             input.x += 1;
             isMoving = true;
@@ -54,11 +70,13 @@ public class PlayerMovement : MonoBehaviour
             // Debug.Log("Pause walking animation");
         }
 
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && canShoot)
         {
             Debug.Log("Shoot weapon");
             pl.shoot(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
+
+        
         
         if (isMoving) {
             animator.enabled = true;
