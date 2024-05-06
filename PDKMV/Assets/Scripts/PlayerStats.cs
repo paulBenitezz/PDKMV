@@ -8,7 +8,8 @@ public class PlayerStats : MonoBehaviour
     public float MaxPlayerHealth = 5f;
     public float CurrentPlayerHealth;
     public Healthbar healthbar;
-    
+    public SFX SFX;
+    public bool isMale;
 
     void Awake() {
         CurrentPlayerHealth = MaxPlayerHealth;
@@ -16,8 +17,9 @@ public class PlayerStats : MonoBehaviour
     void Start() {
         Debug.Log("Player Health = " + MaxPlayerHealth);
         healthbar.setMaxHealth(MaxPlayerHealth);
-        
-        
+      
+
+
     }
     void Update(){
         if (Input.GetKeyDown(KeyCode.Space))
@@ -30,7 +32,7 @@ public class PlayerStats : MonoBehaviour
     }
 
 
-    public void takeDamage(int damage)
+    public void takeDamage(float damage)
     {
         CurrentPlayerHealth -= damage;
         healthbar.setHealth(CurrentPlayerHealth);
@@ -41,5 +43,12 @@ public class PlayerStats : MonoBehaviour
             Debug.Log("PLAYER DIED ... GAME OVER");
             SceneManager.LoadScene("MainMenu");
         }
-    }
+
+        if (isMale) {
+            SFX.PlayerHurtMaleClip();
+        }
+        else {
+            SFX.PlayerHurtFemaleClip();
+        }
+    }    
 }

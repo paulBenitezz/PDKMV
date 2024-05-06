@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIMaxHealth: 2
   AICurrentHealth: 0
+  AIDamage: 1
 --- !u!114 &1109916943681350097
 MonoBehaviour:
   m_ObjectHideFlags: 0

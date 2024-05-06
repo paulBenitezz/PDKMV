@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &635975592452647549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9164824168577277602}
+  - component: {fileID: 4014337096762386523}
+  m_Layer: 0
+  m_Name: SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9164824168577277602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635975592452647549}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08869465, y: 0.26253244, z: -0.0036455619}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4014337096762386523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635975592452647549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d0dcaaf1464d845bca19e7edd08dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  ClickClip: {fileID: 8300000, guid: cd4260f06ca60904aa0594c125706fe3, type: 3}
+  PlayerHurtMale: {fileID: 8300000, guid: e56f26baa2d78f24cb4540ac893a94e6, type: 3}
+  PlayerHurtFemale: {fileID: 8300000, guid: 472efd4e3fde7594a9be951602b86f33, type: 3}
+  BoxHurt:
+  - {fileID: 8300000, guid: e05fc77bf335ba343a1605ca2835e6cd, type: 3}
+  - {fileID: 8300000, guid: c70e2618b50042143aa5db09cdccf873, type: 3}
+  - {fileID: 8300000, guid: 4c85524ab64a5894093f21d5b37f6bd6, type: 3}

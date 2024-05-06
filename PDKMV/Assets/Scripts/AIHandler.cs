@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class AIHandler : MonoBehaviour
 {
-   public float AIMaxHealth = 2f;
-   public float AICurrentHealth;
+    public float AIMaxHealth = 2f;
+    public float AICurrentHealth;
+    public float AIDamage = 1f;
 
-   void Awake() {
-    AICurrentHealth = AIMaxHealth; 
-   } 
-    public void GetAICurrentHealth() {
-        
+    void Awake()
+    {
+        AICurrentHealth = AIMaxHealth;
+    }
+    public void GetAICurrentHealth()
+    {
+
         AICurrentHealth = AIDamageTake(AICurrentHealth);
 
     }
@@ -33,4 +36,12 @@ public class AIHandler : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    public void AIDealDamageToPlayer(PlayerStats playerStats)
+    {
+        playerStats.takeDamage(AIDamage);
+    }
+
+    public void AIDealDamageToBoombox(BoxStats boxStats) {
+        boxStats.takeDamage(AIDamage);
+    }
 }
