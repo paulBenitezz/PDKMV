@@ -48,3 +48,15 @@ MonoBehaviour:
   songs:
   - {fileID: 8300000, guid: 3ab2780bb69bce948916f070ca82b380, type: 3}
   - {fileID: 8300000, guid: 38111c57b49eb0544b93b33c77f0cc65, type: 3}
+  - {fileID: 8300000, guid: ae15152c853d76b458d03a94d37c93f7, type: 3}
+  - {fileID: 8300000, guid: c201c5585d5650040a46c7afd3e32790, type: 3}
+  - {fileID: 8300000, guid: 177b3caad4e5990409010e8a876dfba7, type: 3}
+  - {fileID: 8300000, guid: 9110512ea752b254086c0cdb7d1c542b, type: 3}
+  - {fileID: 8300000, guid: 84f40c7571bd10a45b9d3f61f680c8b3, type: 3}
+  - {fileID: 8300000, guid: 8ab34d0a066b8104a93a63238dc845fc, type: 3}
+  - {fileID: 8300000, guid: c2116baf3e2345d4787fa809d4e6e5ff, type: 3}
+  - {fileID: 8300000, guid: 92848681add798c4eacd7136fdd368a2, type: 3}
+  - {fileID: 8300000, guid: 63e2d732badada7439c476ac14746617, type: 3}
+  - {fileID: 8300000, guid: 5b728ca468884df46bea6e8d1d74c2e7, type: 3}
+  - {fileID: 8300000, guid: b470432d7ce59ed4db71697500c86e9e, type: 3}
+  tmp: {fileID: 0}

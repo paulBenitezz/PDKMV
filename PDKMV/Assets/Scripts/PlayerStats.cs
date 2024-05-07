@@ -10,6 +10,9 @@ public class PlayerStats : MonoBehaviour
     public Healthbar healthbar;
     public SFX SFX;
     public bool isMale;
+    public Sprite MaleSprite;
+    public Sprite FemaleSprite;
+    SpriteRenderer CurrentSprite;
 
     void Awake() {
         CurrentPlayerHealth = MaxPlayerHealth;
@@ -17,7 +20,9 @@ public class PlayerStats : MonoBehaviour
     void Start() {
         Debug.Log("Player Health = " + MaxPlayerHealth);
         healthbar.setMaxHealth(MaxPlayerHealth);
-      
+        CurrentSprite = GetComponent<SpriteRenderer>();
+        
+        SwapCharacter();
 
 
     }
@@ -51,4 +56,21 @@ public class PlayerStats : MonoBehaviour
             SFX.PlayerHurtFemaleClip();
         }
     }    
+
+
+    public void SwapCharacter() {
+
+        if (PlayerPrefs.GetInt("Sprite") == 1) {    // player selected male
+            CurrentSprite.sprite = MaleSprite;
+            isMale = true;
+        }
+        else if (PlayerPrefs.GetInt("Sprite") == 0) {   // player selected male
+            CurrentSprite.sprite = FemaleSprite;
+            isMale = false;
+        }
+
+        else {
+            Debug.LogError("Sprite not selected");
+        }
+    }
 }

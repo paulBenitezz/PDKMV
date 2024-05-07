@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputController : MonoBehaviour
 {
@@ -9,16 +10,27 @@ public class PlayerInputController : MonoBehaviour
     ProjectileLauncher pl;
     bool isMoving = false;
     Animator animator;
-    GameLoader gameLoader;
-    bool isPaused = false;
     public bool canShoot = true;
+    PlayerStats player;
+    public RuntimeAnimatorController maleController;
+    public RuntimeAnimatorController femaleController;
 
     // Start is called before the first frame update
     void Start()
     {
         pl = GetComponent<ProjectileLauncher>();
         animator = GetComponentInParent<Animator>();
+        player = GetComponentInParent<PlayerStats>();
 
+        if (PlayerPrefs.GetInt("Sprite") == 1) {
+            animator.runtimeAnimatorController = maleController;
+            Debug.Log("Male Animator selected ");
+        }
+        else if (PlayerPrefs.GetInt("Sprite") == 0) 
+        {
+            animator.runtimeAnimatorController = femaleController;
+            Debug.Log("Female Animator selected ");
+        }
     }
 
     // Update is called once per frame
@@ -26,19 +38,8 @@ public class PlayerInputController : MonoBehaviour
     {
         Vector3 input = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.Escape)) {
-
-            if (!isPaused) {
-                gameLoader.Pause();
-                isPaused = true;
-            }
-            else {
-                gameLoader.Unpause();
-                isPaused = false;
-            }
-
             
-        }
+        
 
         if (Input.GetKey(KeyCode.W))
         {
