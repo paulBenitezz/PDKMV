@@ -99,7 +99,6 @@ public class AIChase : MonoBehaviour
                 if (canAttack) { 
 
                 AttackBoombox();
-                Debug.Log("Not Moving, animation should stop");
                 animator.enabled = false;
                 }
                 else

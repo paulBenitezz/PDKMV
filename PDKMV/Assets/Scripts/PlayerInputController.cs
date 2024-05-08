@@ -14,6 +14,7 @@ public class PlayerInputController : MonoBehaviour
     PlayerStats player;
     public RuntimeAnimatorController maleController;
     public RuntimeAnimatorController femaleController;
+    SFX SFX;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,13 @@ public class PlayerInputController : MonoBehaviour
             animator.runtimeAnimatorController = femaleController;
             Debug.Log("Female Animator selected ");
         }
+
+        if (SFX == null) {
+            Debug.LogWarningFormat("SFX is null");
+        }
+        GameObject sfx = GameObject.FindGameObjectWithTag("SFX");
+        SFX = sfx.GetComponent<SFX>();
+        
     }
 
     // Update is called once per frame
@@ -73,12 +81,12 @@ public class PlayerInputController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && canShoot)
         {
-            Debug.Log("Shoot weapon");
+            // Debug.Log("Shoot weapon");
             pl.shoot(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            
+            SFX.WeaponShot();
         }
 
-        
-        
         if (isMoving) {
             animator.enabled = true;
             animator.SetBool("isMoving", true);

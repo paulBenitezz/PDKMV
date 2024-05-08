@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4014337096762386523}
   m_Layer: 0
   m_Name: SFX
-  m_TagString: Untagged
+  m_TagString: SFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,9 @@ MonoBehaviour:
   ClickClip: {fileID: 8300000, guid: cd4260f06ca60904aa0594c125706fe3, type: 3}
   PlayerHurtMale: {fileID: 8300000, guid: e56f26baa2d78f24cb4540ac893a94e6, type: 3}
   PlayerHurtFemale: {fileID: 8300000, guid: 472efd4e3fde7594a9be951602b86f33, type: 3}
+  Heal: {fileID: 8300000, guid: e7b0cbde7388a7947a6807d656983c05, type: 3}
+  Fix: {fileID: 8300000, guid: cd79adfb56eec9143a4049edb027e9f5, type: 3}
+  shot: {fileID: 8300000, guid: 33f88d1787c86f340b14b01519bef903, type: 3}
   BoxHurt:
   - {fileID: 8300000, guid: e05fc77bf335ba343a1605ca2835e6cd, type: 3}
   - {fileID: 8300000, guid: c70e2618b50042143aa5db09cdccf873, type: 3}

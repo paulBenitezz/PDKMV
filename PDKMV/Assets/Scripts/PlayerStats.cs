@@ -12,7 +12,9 @@ public class PlayerStats : MonoBehaviour
     public bool isMale;
     public Sprite MaleSprite;
     public Sprite FemaleSprite;
+    public GameOver gameOver;
     SpriteRenderer CurrentSprite;
+    
 
     void Awake() {
         CurrentPlayerHealth = MaxPlayerHealth;
@@ -21,7 +23,6 @@ public class PlayerStats : MonoBehaviour
         Debug.Log("Player Health = " + MaxPlayerHealth);
         healthbar.setMaxHealth(MaxPlayerHealth);
         CurrentSprite = GetComponent<SpriteRenderer>();
-        
         SwapCharacter();
 
 
@@ -46,7 +47,8 @@ public class PlayerStats : MonoBehaviour
         if (CurrentPlayerHealth <= 0)
         {
             Debug.Log("PLAYER DIED ... GAME OVER");
-            SceneManager.LoadScene("MainMenu");
+            gameOver.GameOverScreen("Player");
+            // SceneManager.LoadScene("MainMenu");
         }
 
         if (isMale) {
@@ -72,5 +74,17 @@ public class PlayerStats : MonoBehaviour
         else {
             Debug.LogError("Sprite not selected");
         }
+    }
+
+    public void AddHealth(float health)
+    {
+
+        if (CurrentPlayerHealth != MaxPlayerHealth) 
+        {
+            CurrentPlayerHealth += health;
+            healthbar.setHealth(CurrentPlayerHealth);
+            
+        }
+        
     }
 }

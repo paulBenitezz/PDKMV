@@ -21,7 +21,7 @@ public class AISpawner : MonoBehaviour
         int randEne = Random.Range(0,EnemyType.Length);
 
         Vector3 pos = SpawnLocations[randLoc].transform.position;
-        //transform.position = pos;
+        
         Debug.Log("Spawn Location " + randLoc + " position: " + pos);
         GameObject newEnemy = Instantiate(EnemyType[randEne], pos, quaternion.identity);
         

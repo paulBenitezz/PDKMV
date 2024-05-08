@@ -281,6 +281,11 @@ MonoBehaviour:
   MaxPlayerHealth: 5
   CurrentPlayerHealth: 0
   healthbar: {fileID: 0}
+  SFX: {fileID: 0}
+  isMale: 1
+  MaleSprite: {fileID: 21300000, guid: b168b6574b66c2247a579c85f5b50e4b, type: 3}
+  FemaleSprite: {fileID: 21300000, guid: 11ede9f2a9d5b7d49901717558280e56, type: 3}
+  gameOver: {fileID: 0}
 --- !u!114 &4490323849466038979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,7 +323,7 @@ Animator:
   m_GameObject: {fileID: 5048977490485483097}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 678d941013c32074baf0e910e38b1582, type: 2}
+  m_Controller: {fileID: 9100000, guid: 682b1714d6413944581b8702511b7d3d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -548,6 +553,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8822113602740198745}
     - target: {fileID: 6371378094126076012, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
+      propertyPath: muzzle
+      value: 
+      objectReference: {fileID: 8822113602740198745}
+    - target: {fileID: 6371378094126076012, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
+      propertyPath: poolSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371378094126076012, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
       propertyPath: projectile
       value: 
       objectReference: {fileID: 155268584659030926, guid: 94b33829842350d45add42f226ee90a3, type: 3}
@@ -571,6 +584,14 @@ PrefabInstance:
       propertyPath: movement
       value: 
       objectReference: {fileID: 5490239278868057621}
+    - target: {fileID: 7737514604385528754, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
+      propertyPath: maleController
+      value: 
+      objectReference: {fileID: 9100000, guid: 678d941013c32074baf0e910e38b1582, type: 2}
+    - target: {fileID: 7737514604385528754, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
+      propertyPath: femaleController
+      value: 
+      objectReference: {fileID: 9100000, guid: 92b935fa3c844e34b83edab5249da5f4, type: 2}
     - target: {fileID: 8676381698489488080, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -617,7 +638,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3586293562438944194, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7052813032515853240}
+      addedObject: {fileID: 8319247342427216978}
   m_SourcePrefab: {fileID: 100100000, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
 --- !u!4 &2169115500149242939 stripped
 Transform:
@@ -629,7 +650,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3586293562438944194, guid: d9188d45fd6fdf044bea737071e6ac27, type: 3}
   m_PrefabInstance: {fileID: 7382116814674390763}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7052813032515853240
+--- !u!114 &8319247342427216978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

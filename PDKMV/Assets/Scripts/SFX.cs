@@ -10,6 +10,9 @@ public class SFX : MonoBehaviour
 
     public AudioClip PlayerHurtMale;
     public AudioClip PlayerHurtFemale;
+    public AudioClip Heal;
+    public AudioClip Fix;
+    public AudioClip shot;
     public AudioClip[] BoxHurt;
 
 
@@ -33,6 +36,23 @@ public class SFX : MonoBehaviour
     {
         int rand = Random.Range(0, BoxHurt.Length);
         audioSource.clip = BoxHurt[rand];
+        audioSource.Play();
+    }
+
+    public void PlayerHeal()
+    {
+        audioSource.clip = Heal;
+        audioSource.Play();
+    }
+    public void BoxHeal()
+    {
+        audioSource.clip = Fix;
+        audioSource.Play();
+    }
+
+    public void WeaponShot()
+    {
+        audioSource.clip = shot;
         audioSource.Play();
     }
 

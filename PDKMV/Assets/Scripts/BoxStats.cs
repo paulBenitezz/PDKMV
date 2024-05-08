@@ -10,7 +10,7 @@ public class BoxStats : MonoBehaviour
     public float CurrentBoxHealth;
     public Healthbar healthbar;
     public SFX SFX;
-    public AudioSource aud;
+    public GameOver gameOver;
 
     void Awake()
     {
@@ -26,10 +26,7 @@ public class BoxStats : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            takeDamage(1);
-        }
+    
     }
 
 
@@ -41,10 +38,21 @@ public class BoxStats : MonoBehaviour
         if (CurrentBoxHealth <= 0)
         {
             Debug.Log("BOOMBOX DESTROYED ... GAME OVER");
-            SceneManager.LoadScene("MainMenu");
+            gameOver.GameOverScreen("Boombox");
         }
         
         SFX.BoxHurtClip();
+    }
+
+    public void AddHealth(float health) 
+    {
+
+        if (CurrentBoxHealth != MaxBoxHealth)
+        {
+            CurrentBoxHealth += health;
+            healthbar.setHealth(CurrentBoxHealth);
+        }
+            SFX.BoxHeal();
     }
 
     

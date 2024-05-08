@@ -8,6 +8,9 @@ TagManager:
   - Boombox
   - Enemy_Music
   - Enemy_Player
+  - Wrench
+  - Heart
+  - SFX
   layers:
   - Default
   - TransparentFX

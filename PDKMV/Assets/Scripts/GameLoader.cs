@@ -34,6 +34,12 @@ public class GameLoader : MonoBehaviour
             SwitchSongs();
             StartCoroutine(PrintSongs(5f));
         }
+
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            GoBackSongs();
+            StartCoroutine(PrintSongs(5f));
+        }
     }
 
     public void PlaySelectedSong()
@@ -59,6 +65,20 @@ public class GameLoader : MonoBehaviour
 
         if (selectedSongIndex >= songs.Length) {
             selectedSongIndex = 0;
+        }
+
+        audioSource.clip = songs[selectedSongIndex];
+        audioSource.Play();
+        Debug.Log("Now Playing: " + audioSource.clip);
+    }
+
+    public void GoBackSongs()
+    {
+        selectedSongIndex--;
+
+        if (selectedSongIndex == 0)
+        {
+            selectedSongIndex = songs.Length;
         }
 
         audioSource.clip = songs[selectedSongIndex];
@@ -107,7 +127,9 @@ public class GameLoader : MonoBehaviour
     public void Quit() 
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
+
 
     
     
