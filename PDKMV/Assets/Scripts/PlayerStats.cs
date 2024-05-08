@@ -28,11 +28,6 @@ public class PlayerStats : MonoBehaviour
 
     }
     void Update(){
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            takeDamage(1);
-          
-        }
 
 
     }
